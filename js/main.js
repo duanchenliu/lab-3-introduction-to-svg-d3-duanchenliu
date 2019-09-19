@@ -48,15 +48,22 @@ d3.csv('data/cities.csv')
 		 .enter()
 		 .append("text")
 		 .attr("class", "city-label")
+		 .text(function(d){
+			 return d.city;
+		 })
 		 .attr("x", function(d,index){
-			 return d.x + 5;
+			 return d.x;
 		 })
 		 .attr("y", function(d,index){
-			 return d.y + 5;
+			 return d.y - 10;
 		 })
-		 .attr("font-size", 20)
-		 .attr("font-family", "sans-serif")
-		 .attr("fill", "blue");
+		 .style("opacity", function(d,index){
+			 if (d.population>=1000000){
+				 return 1;
+			 }else{
+				 return 0;
+			 }
+		 });
 
 
 
