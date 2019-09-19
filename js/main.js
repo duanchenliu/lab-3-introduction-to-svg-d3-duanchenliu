@@ -28,7 +28,7 @@ d3.csv('data/cities.csv')
        .data(filtered)
 	   .enter()
 	   .append("circle")
-	   .attr("fill", "Orange")
+	   .attr("fill", "turquoise")
 	   .attr("r", function(d, index){
 		   if (d.population<1000000){
 			   return 4;
@@ -55,7 +55,7 @@ d3.csv('data/cities.csv')
 			 return d.x;
 		 })
 		 .attr("y", function(d,index){
-			 return d.y - 10;
+			 return d.y - 15;
 		 })
 		 .style("opacity", function(d,index){
 			 if (d.population>=1000000){
