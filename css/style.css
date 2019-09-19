@@ -1,1 +1,5 @@
 /* custom css rules */
+.city-label{
+    font-size: 11px;
+    text-anchor: middle;
+}
